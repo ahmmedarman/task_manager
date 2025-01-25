@@ -6,19 +6,19 @@ class TaskManagerApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      initialRoute : '/',
-      onGenerateRoute: ( RouteSettings settings) {
-      late Widget widget;
-      if(settings.name == '/') {
-        widget= const SplashScreen();
-      }
+    return MaterialApp(
+      initialRoute: '/',
+      onGenerateRoute: (RouteSettings settings) {
+        late Widget widget;
+        if (settings.name == '/') {
+          widget = const SplashScreen();
+        }
 
-      return MaterialPageRoute(builder: (_) => widget);
+        return MaterialPageRoute(builder: (_) => widget);
       },
 
     );
-
+  }
 }
 
 
