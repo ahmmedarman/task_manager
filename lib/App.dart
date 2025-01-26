@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager/ui/Screens/sign_in_screen.dart';
 import 'package:task_manager/ui/Screens/splash_screen.dart';
 
 class TaskManagerApp extends StatelessWidget {
@@ -10,15 +11,14 @@ class TaskManagerApp extends StatelessWidget {
       initialRoute: '/',
       onGenerateRoute: (RouteSettings settings) {
         late Widget widget;
-        if (settings.name == '/') {
+        if (settings.name == SplashScreen.name) {
           widget = const SplashScreen();
+        } else if (settings.name == SignInScreen.name) {
+          widget = const SignInScreen();
         }
 
         return MaterialPageRoute(builder: (_) => widget);
       },
-
     );
   }
 }
-
-
